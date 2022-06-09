@@ -1,7 +1,30 @@
+import NewMeetupForm from "../components/meetups/NewMeetupForm/NewMeetupForm";
 
-function NewMeetupPage(){
+const NewMeetupPage=()=>{
 
-    return <div>New Meetup Page</div>
+	// send http request
+	const addMeetupHandler=(meetupData)=>{
+
+		const API_URL='https://react-learning-85b85-default-rtdb.europe-west1.firebasedatabase.app';
+
+		fetch(API_URL+'/meetups.json',
+		{
+			method:'POST',
+			body:JSON.stringify(meetupData),
+			headers:{
+				'Content-Type':'application/json'
+			}
+		});
+
+	};
+
+    return (
+			<section>
+				<h1>New Meetup</h1>
+				<NewMeetupForm onAddMeetup={addMeetupHandler}/>
+
+			</section>
+		)
 
 }
 export default NewMeetupPage;

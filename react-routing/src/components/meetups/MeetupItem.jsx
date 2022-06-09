@@ -1,7 +1,7 @@
 import classes from './MeetupItem.module.css';
 import Card from '../ui/Card';
 
-function MeetupItem(props){
+const MeetupItem=(props)=>{
 	return (
 		<li className={classes.item}>
 			<Card>
@@ -19,6 +19,6 @@ function MeetupItem(props){
 			</Card>
 		</li>
 	)
-}
+};
 
 export default MeetupItem;

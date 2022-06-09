@@ -23,7 +23,7 @@ const DUMMY_DATA = [
   },
 ];
 
-function AllMeetupsPage(){
+const AllMeetupsPage=()=>{
 
     return (
 			<section>
